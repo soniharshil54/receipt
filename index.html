@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice with GST</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+     
+
+      <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+
+
+
+      <style type="text/css">
+        table {
+    counter-reset: tableCount;     
+}
+.counterCell:before {              
+    content: counter(tableCount); 
+    counter-increment: tableCount; 
+}
+      </style>
+
+  
+</head>
+
+
+
+ 
+
+
+<body id="form">
+ 
+
+  <form>
+    <div style="padding-top: 30px;padding-bottom: 20px;text-align: center">
+
+
+        <div  style="height: 100px;display: inline;width: 100px;float: left;">
+          <img style="" src="logo.png">
+        </div>
+      
+
+        <div style="width: 46%;display: inline; float: left;">
+          <span style="font-family: 'Audiowide', cursive;font-size: 55px; font-weight: bold; color: black;display: inline">ITALIYA
+            <br><span style="font-size: 26px;margin-left: -5px;padding: 5px;margin-top: 5px;background-color: black; color: white">GYM & FITNESS</span></span><br>
+         <br>
+         
+
+          </div>
+
+          <div style="width: 34%; display: inline;float: left;">
+
+            <table style="width: 100%" class="meta" id="top_data_table">
+         <tbody>
+          <tr class="" id="invoice_number_row">
+            <th style="width: 100px" class="bold"><span class="invoice" id="invoice">Receipt No&nbsp;</span></th> 
+            <td><span contenteditable="true">000</span></td>
+          </tr>
+
+          <tr class="" id="invoice_number_row">
+            <th class="bold"><span class="invoice" id="invoice">Member ID No&nbsp;</span></th> 
+            <td><span contenteditable="true">000</span></td>
+          </tr>
+          
+
+          <tr id="daterow">
+            <th class="bold"><span class="date" id="date">Date</span></th>
+            <td><span contenteditable=""><input type="date" id="todayDate"></span></td>
+          </tr>
+
+         
+
+        </tbody>
+      </table>
+      </div>
+        <!-- <h2 style="font-size: 40px;background-color: red;color: white">Fire Bottles</h2> -->
+       <!--  <div style="width: 17%;display: inline;float: right;">
+         
+          
+        </div> -->
+
+      
+     
+    </div>
+  <!-- <p class="text-center mah_in">|| श्री ||</p>  -->
+    <article style="margin: 0" class="invoicebody" style="display: block;">
+      <div class="left_info" style="width: 100%">
+        <div>
+        <label style="">Received from Mr./Mrs./Ms.       </label>
+        <input style="width: 490px" type="text" class="clientDetails" id="company_name"  ><br><br>
+        <label style="">Rs.     </label>
+        <input style="width: 100px" type="text" class="clientDetails" id="customer_name">
+        <label style="">Rupees.(in Words)      </label>
+        <input style="width: 430px" type="text" class="clientDetails" id="occupation" ><br><br>
+        <label style="">Cash/Cheque No      </label>
+        <input style="width: 215px" type="text" class="clientDetails" id="occupation" >
+        <label style="">Name of the Bank      </label>
+        <input style="width: 215px" type="text" class="clientDetails" id="occupation" ><br><br>
+        <label style="">Package      </label>
+        <input style="width: 640px" type="text" class="clientDetails" id="occupation" ><br><br>
+        <label style="">Total Fees      </label>
+        <input style="width: 155px" type="text" class="clientDetails" id="occupation" ><label style="">Fees Paid      </label>
+        <input style="width: 155px" type="text" class="clientDetails" id="occupation" ><label style="">Fees Due      </label>
+        <input style="width: 155px" type="text" class="clientDetails" id="occupation" >
+        </div><br>
+        <br>
+        <div>
+
+         <span style="border: 1px solid black; font-size: 40px; margin-bottom: 20px;width: 120px"><span style="background-color: black;color: white">Rs </span><span contenteditable="true">&emsp;5000</span></span>
+
+         <span style="float: right;">For, ITALIYA GYM & FITNESS</span>
+
+         </div>
+       
+        
+       <!--  <input type="text" class="clientDetails" id="doy"           placeholder="Client Email"> -->
+    </div>
+  
+  <div class="min_height">
+      
+      
+      <div class="left_btn">
+          <button class="mah_btn" onclick="myprint()">Print</button>
+          <button class="mah_btn" onClick="window.location.reload()">Reset</button>
+      </div>
+         
+  </div>
+    </article>
+
+
+   
+  </form>
+
+<!-- <div class="Signature" style="margin-top: -100px">
+  <ul>
+    <li>Client Signature</li>
+    <li>Owner Signature</li>
+  </ul>
+</div> -->
+
+
+
+
+ <!--  <button id="cmd">Download</button>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+<!-- <script type="text/javascript">
+  $(function() {
+  var doc = new jsPDF();
+  var specialElementHandlers = {
+    '#editor': function(element, renderer) {
+      return true;
+    }
+  };
+  $('#cmd').click(function() {
+    doc.fromHTML($('#form').html(), 15, 15, {
+      'width': 170,
+      'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+  });
+});
+</script> -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+    let todaydate = new Date().toISOString().substr(0, 10);
+document.querySelector("#todayDate").value = todaydate;
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
